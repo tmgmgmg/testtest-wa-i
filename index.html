@@ -37,18 +37,20 @@
     <div class="panel" data-color="red">
       <h2>Red panel</h2>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script>
-        $(window).scroll(function() {
+        $(function(){
+            $(window).scroll(function() {
   
         // selectors
-        var $window = $(window),
-            $body = $('body'),
-            $panel = $('.panel');
-        
+            var $window = $(window),
+                $body = $('body'),
+                $panel = $('.panel');
+  
         // Change 33% earlier than scroll position so colour is there when you arrive.
-        var scroll = $window.scrollTop() + ($window.height() / 3);
+            var scroll = $window.scrollTop() + ($window.height() / 3);
         
-        $panel.each(function () {
+         $panel.each(function () {
             var $this = $(this);
             
             // if position is within range of this panel.
@@ -67,6 +69,8 @@
         });    
         
         }).scroll();
+        });
+
     </script>
 </body>
 </html>
